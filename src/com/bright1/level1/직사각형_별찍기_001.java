@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  * 제한 조건
  * n과 m은 각각 1000 이하인 자연수입니다.
  * */
-public class RectangularStar_001 {
+public class 직사각형_별찍기_001 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
