@@ -20,7 +20,7 @@ import java.util.stream.LongStream;
  * -4	2	[-4, -8]
  *
  * */
-public class X만큼_각격이_있는_N개의_숫자 {
+public class X만큼_각격이_있는_N개의_숫자_002 {
     public static void main(String[] args) {
         Solution solution = new Solution();
         Scanner s = new Scanner(System.in);
