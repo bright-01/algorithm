@@ -1,5 +1,6 @@
 package com.bright1.level1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
@@ -18,12 +19,37 @@ import java.util.stream.Stream;
  * */
 public class 핸드폰_번호_가리기_004 {
     public static void main(String[] args) {
+
+        Scanner s1 = new Scanner(System.in);
+        String number = s1.next();
+        System.out.println(new Solution_004().solution(number));
     }
 }
 
 class Solution_004 {
     public String solution(String phone_number) {
         String answer = "";
+        int i1 = phone_number.length();
+        int i2 = i1 - 4;
+        for(int i=0; i < i1; i++){
+            if(i < i2){
+                answer += '*';
+            }else{
+                answer += phone_number.charAt(i);
+            }
+        }
         return answer;
+    }
+
+    public String solution2(String phone_number) {
+       char[] ch = phone_number.toCharArray();
+       for(int i =0; i < ch.length -4; i++){
+           ch[i] = '*';
+       }
+       return String.valueOf(ch);
+    }
+
+    public String solution3(String phone_number) {
+        return phone_number.replaceAll(".(?=.{4})", "*");
     }
 }
