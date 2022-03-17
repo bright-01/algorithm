@@ -1,6 +1,5 @@
-package com.bright1.level1;
+package com.bright1.programmers.level1;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 

@@ -1,4 +1,4 @@
-package com.bright1.level1;
+package com.bright1.programmers.level1;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;
