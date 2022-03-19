@@ -29,6 +29,7 @@ public class 정수_제곱근_판별_011 {
 
     }
 }
+
 class Solution_011 {
     public long solution(long n) {
         long answer = 0;
