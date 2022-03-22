@@ -21,6 +21,7 @@ import java.util.Scanner;
  * 입출력 예#2
  * 3은 양의 정수의 제곱이 아니므로, -1을 리턴합니다.
  *
+ *
  * */
 public class 정수_제곱근_판별_011 {
     public static void main(String[] args) {
