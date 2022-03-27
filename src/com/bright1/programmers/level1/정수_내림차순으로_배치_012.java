@@ -37,6 +37,7 @@ class Solution_012 {
     }
 
 
+
     public long solution2(long n) {
         return Long.parseLong(String.valueOf(n).chars().mapToObj(ch -> (char) ch)
                 .sorted(Comparator.reverseOrder())
