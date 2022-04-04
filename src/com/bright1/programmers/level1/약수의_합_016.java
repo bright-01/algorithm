@@ -1,4 +1,7 @@
 package com.bright1.programmers.level1;
+
+import java.util.Scanner;
+
 /**
  *문제 설명
  * 정수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.
@@ -17,12 +20,21 @@ package com.bright1.programmers.level1;
  * 5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.
  * */
 public class 약수의_합_016 {
+    public static void main(String[] args) {
+        int num = new Scanner(System.in).nextInt();
+        System.out.println(new Solution_016().solution(num));
+    }
 
 }
 
 class Solution_016 {
     public int solution(int n) {
         int answer = 0;
-        return answer;
+        for(int i = 1; i<=n/2; i++){
+            if(n%i == 0 ){
+                answer += i;
+            }
+        }
+        return answer+n;
     }
 }
