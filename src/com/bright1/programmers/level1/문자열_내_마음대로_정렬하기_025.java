@@ -1,4 +1,7 @@
 package com.bright1.programmers.level1;
+
+import java.util.*;
+
 /**
  *
  * 문제 설명
@@ -24,13 +27,71 @@ package com.bright1.programmers.level1;
  *
  *
  * */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public class 문자열_내_마음대로_정렬하기_025 {
+    public static void main(String[] args) {
+
+
+
+        long stime1 = System.currentTimeMillis();
+        System.out.println(new Solution_025().solution2(new String[]{"sun", "bed", "car"}, 2));
+        long etime1 = System.currentTimeMillis();
+        System.out.println("=============== :: " + (etime1-stime1));
+
+        long stime2 = System.currentTimeMillis();
+        System.out.println(new Solution_025().solution3(new String[]{"sun", "bed", "car"}, 2));
+        long etime2 = System.currentTimeMillis();
+        System.out.println("=============== :: " + (etime2-stime2));
+
+
+
+    }
 }
 
 
 class Solution_025 {
-    public String[] solution(String[] strings, int n) {
+    public String[] solution2(String[] strings, int n) {
+        Arrays.sort(strings, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                int nCompare = (s1.charAt(n) + "").compareTo((s2.charAt(n) + ""));
+                return nCompare == 0 ? s1.compareTo(s2) : nCompare;
+            }
+        });
+        return strings;
+    }
+
+    public String[] solution3(String[] strings, int n) {
         String[] answer = {};
+        ArrayList<String> arr = new ArrayList<>();
+        for (int i = 0; i < strings.length; i++) {
+            arr.add("" + strings[i].charAt(n) + strings[i]);
+        }
+        Collections.sort(arr);
+        answer = new String[arr.size()];
+        for (int i = 0; i < arr.size(); i++) {
+            answer[i] = arr.get(i).substring(1, arr.get(i).length());
+        }
         return answer;
     }
+
 }
