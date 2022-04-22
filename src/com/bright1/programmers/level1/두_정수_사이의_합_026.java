@@ -1,4 +1,8 @@
 package com.bright1.programmers.level1;
+
+import java.util.Scanner;
+import java.util.stream.IntStream;
+
 /**
  * 문제 설명
  * 두 정수 a, b가 주어졌을 때 a와 b 사이에 속한 모든 정수의 합을 리턴하는 함수, solution을 완성하세요.
@@ -18,12 +22,47 @@ package com.bright1.programmers.level1;
 public class 두_정수_사이의_합_026 {
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        long stime1 = System.currentTimeMillis();
+        System.out.println(new Solution_026().solution(a,b));
+        long etime2 = System.currentTimeMillis();
+        System.out.println("=============== :: " + (etime2-stime1));
+
+        long stime = System.currentTimeMillis();
+        System.out.println(new Solution_026().solution2(a,b));
+        long etime = System.currentTimeMillis();
+        System.out.println("=============== :: " + (etime-stime));
     }
 }
 
 class Solution_026 {
     public long solution(int a, int b) {
         long answer = 0;
+
+        int startInt = a <= b ? a : b;
+        int endInt = a > b ? a : b;
+
+
+        for(int i = startInt; i<=endInt; i++){
+            answer += i;
+        }
         return answer;
     }
+
+    public long solution2(int a, int b) {
+        return IntStream.rangeClosed(a,b).sum();
+    }
+
+
+    public long solution3(int a, int b) {
+        return sumAtoB(Math.min(a, b), Math.max(b, a));
+    }
+
+    private long sumAtoB(long a, long b) {
+        return (b - a + 1) * (a + b) / 2;
+    }
+
 }
