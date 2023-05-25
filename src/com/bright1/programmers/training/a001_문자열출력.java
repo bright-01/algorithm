@@ -1,7 +1,6 @@
 package com.bright1.programmers.training;
 
 
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -20,7 +19,7 @@ import java.util.Scanner;
  * HelloWorld!
  *
  * */
-public class 문자열출력 {
+public class a001_문자열출력 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
