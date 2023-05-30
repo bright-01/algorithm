@@ -25,7 +25,7 @@ public class a006_덧셈식출력하기 {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        System.out.println(a + b);
+        System.out.println(a + " + " + b + " = " + (a+b));
     }
 
 }
