@@ -26,7 +26,7 @@ package com.bright1.programmers.training;
 public class a010_문자열겹쳐쓰기 {
 
     public static void main(String[] args) {
-        solution("He11oWor1dHe11oWor1dHe11oWor1d  ", "lloWorl", 2);
+        solution("He11oWor1dHe11oWor1dHe11oWor                    1d  ", "lloWorl", 2);
     }
     public static String solution(String my_string, String overwrite_string, int s) {
 
