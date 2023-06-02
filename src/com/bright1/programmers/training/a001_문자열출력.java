@@ -20,13 +20,6 @@ import java.util.Scanner;
  *
  * */
 public class a001_문자열출력 {
-
-
-
-
-
-
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
