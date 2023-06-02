@@ -65,6 +65,8 @@ class Solution_045 {
 
     }
 
+
+
     public int solution2(int n) {
         String a = "";
 
