@@ -22,7 +22,7 @@ import java.util.Scanner;
  *
  * 1 is odd
  * */
-public class a_009_홀짝구분하기 {
+public class a009_홀짝구분하기 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
