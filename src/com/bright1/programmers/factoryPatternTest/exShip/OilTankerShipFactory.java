@@ -1,6 +1,6 @@
 package com.bright1.programmers.factoryPatternTest.exShip;
 
-public class OilTankerShipFactory extends ShipFactory{
+public class OilTankerShipFactory implements ShipFactory {
 
 
     private OilTankerShipFactory() {}
@@ -14,7 +14,7 @@ public class OilTankerShipFactory extends ShipFactory{
     }
 
     @Override
-    protected Ship createShip() {
+    public Ship createShip() {
         return new ContainerShip("oiltanker", "15T", "blue");
     }
 }

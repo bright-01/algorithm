@@ -1,15 +1,15 @@
 package com.bright1.programmers.factoryPatternTest.exShip;
 
-public abstract class ShipFactory {
+interface ShipFactory {
 
-    final Ship orderShip(String email) {
+    default Ship orderShip(String email) {
         validate(email);
         Ship ship = createShip();
         sendEmailTo(email, ship);
         return ship;
     }
 
-    abstract protected Ship createShip();
+     Ship createShip();
 
     private void validate(String email) {
         if (email == null) {

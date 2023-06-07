@@ -1,6 +1,6 @@
 package com.bright1.programmers.factoryPatternTest.exShip;
 
-public class ContainerShipFactory extends ShipFactory{
+public class ContainerShipFactory implements ShipFactory {
 
     private ContainerShipFactory() {}
 
@@ -13,7 +13,7 @@ public class ContainerShipFactory extends ShipFactory{
     }
 
     @Override
-    protected Ship createShip() {
+    public Ship createShip() {
         return new ContainerShip("container", "20T", "green");
     }
 }
