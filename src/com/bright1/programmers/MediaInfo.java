@@ -20,4 +20,6 @@ public class MediaInfo {
                 ", test6='" + test6 + '\'' +
                 '}';
     }
+
+    // 일단 이거 수정
 }
